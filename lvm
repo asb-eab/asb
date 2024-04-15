@@ -123,3 +123,40 @@ Filesystem Size Used Avail Use% Mounted on
 /dev/mapper/fileserver-samba
             291M 11M 266M 4% /mnt/data
 Как мы видим, наш логический том готов к использованию!
+
+
+
+
+
+ 1  sudo apt-get update
+    2  sudo apt-get dist-upgrade
+    3  sudo update-kernel
+    4  sudo reboot
+    5  lsblk
+    6  sudo parted /dev/sdb
+    7  sudo fdisk -l /dev/sdb
+    8  lsblk
+    9  sudo pvcreate /dev/sdb1
+   10  sudo vgcreate mysql /dev/sdb1
+   11  sudo lvcreate  -L 215G -n mysql-data mysql
+   12  sudo lvcreate  -L 210G -n mysql-data mysql
+   13  sudo lvcreate  -L 200G -n mysql-data mysql
+   14  sudo lvcreate  -L 210000M -n mysql-data mysql
+   15  sudo lvcreate  -L 208000M -n mysql-data mysql
+   16  sudo lvcreate  -L 207000M -n mysql-data mysql
+   17  sudo lvcreate  -L 206000M -n mysql-data mysql
+   18  sudo lvcreate  -L 205000M -n mysql-data mysql
+   19  sudo lvcreate  -L 204000M -n mysql-data mysql
+   20  sudo lvscan
+   21  sudo mkdir /mysql
+   22  sudo mkfs.xfs /dev/mysql/mysql-data
+   23  sudo mkfs.xfs /dev/mysql/mysql-data
+   24  df -Th
+   25  sudo mount /dev/mysql/mysql-data /mysql/
+   26  df -Th
+   27  sudo vim /etc/fstab
+   28  df -Th
+   29  sudo vim /etc/fstab
+   30  sudo reboot
+   31  df -Th
+   32  history
